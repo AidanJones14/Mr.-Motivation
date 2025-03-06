@@ -86,7 +86,7 @@ async def main():
 
     text_prompt = "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
 
-    friends = load_friends_from_json('./friends.json')
+    friends = load_friends_from_json('sms_project/friends.json')
 
     print(f"Generating text message for ALL")
 
