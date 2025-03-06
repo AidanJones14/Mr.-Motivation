@@ -82,7 +82,7 @@ def load_friends_from_json(json_file: str) -> list:
 
 async def main():
     _email = "aidanirish14@gmail.com"
-    _pword = os.getenv("GMAIL_APP_PASSWORD") # Use an App Password
+    _pword = "nrfs rsgp etrt ovco" # Use an App Password
 
     print(f"GMAIL_APP_PASSWORD is set to: {os.getenv('GMAIL_APP_PASSWORD')}")
 
