@@ -23,9 +23,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt  # Make sure the correct version of 'openai' gets installed.
 
+    - name: Print environment variables (for debugging)
+      run: echo $OPENAI_API_KEY  # Be careful, do not log sensitive info in production
+
     - name: Run the Python script
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+
       run: |
         python sms_project/text.py  # Make sure this path is correct.
