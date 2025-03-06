@@ -3,7 +3,7 @@ import json
 from email.message import EmailMessage
 import aiosmtplib
 import openai
-
+import os
 # SMTP Configuration
 HOST = "smtp.gmail.com"
 
