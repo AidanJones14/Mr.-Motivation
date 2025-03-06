@@ -84,6 +84,8 @@ async def main():
     _email = "aidanirish14@gmail.com"
     _pword = os.getenv("GMAIL_APP_PASSWORD") # Use an App Password
 
+    print(f"GMAIL_APP_PASSWORD is set to: {os.getenv('GMAIL_APP_PASSWORD')}")
+
     text_prompt = "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
 
     friends = load_friends_from_json('sms_project/friends.json')
@@ -105,7 +107,7 @@ async def main():
         print(f"Generating email message for {friend['name']} ({num})...")
 
         generated_message = generate_message(prompt)
-        print(f"Generated email message: {generated_text_message}")
+        print(f"Generated email message: {generated_message}")
 
         subject = "Message from Mr. Motivation"
 
