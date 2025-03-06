@@ -1,21 +1,12 @@
-name: 📅 Schedule Workflow Dispatch
+name: Daily Task
+
 on:
   schedule:
-    - cron: '0 0 * * *' # every hour
-  workflow_dispatch:
-    inputs:
-      date:
-        description: 'Date to run the workflow'
-        required: true
-        type: string
-        default: 'in 1 hour'
-concurrency:
-  group: schedule${{ github.event.inputs.date }}
-  cancel-in-progress: true
+    - cron: '0 */24 * * *'  # This runs the action every day at midnight (UTC).
+  workflow_dispatch:  # This allows you to manually trigger the action if needed.
 
 jobs:
-  schedule:
-    name: 📅 Schedule
+  run_script:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,23 +16,16 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'  # You can change the Python version if needed.
+        python-version: '3.9'  # You can change the Python version if needed.
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt  # Make sure the correct version of 'openai' gets installed.
 
-    - name: Debug secret availability
-      run: echo "OPENAI_API_KEY is set to ${{ secrets.OPENAI_API_KEY }}"
-
-    - name: Print environment variables (for debugging)
-      run: echo $OPENAI_API_KEY  # Be careful, do not log sensitive info in production
-
     - name: Run the Python script
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-
       run: |
         python sms_project/text.py  # Make sure this path is correct.
