@@ -19,7 +19,7 @@ CARRIER_MAP = {
 }
 
 # OpenAI API Key
-openai.api_key = "OPENAI_API_KEY"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def generate_message(prompt: str) -> str:
@@ -82,7 +82,7 @@ def load_friends_from_json(json_file: str) -> list:
 
 async def main():
     _email = "aidanirish14@gmail.com"
-    _pword = "GMAIL_APP_PASSWORD"  # Use an App Password
+    _pword = os.getenv("GMAIL_APP_PASSWORD") # Use an App Password
 
     text_prompt = "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
 
