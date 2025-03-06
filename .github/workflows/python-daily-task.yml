@@ -1,12 +1,21 @@
-name: Daily Task
-
+name: 📅 Schedule Workflow Dispatch
 on:
   schedule:
-    - cron: '0 0 * * *'  # This runs the action every day at midnight (UTC).
-  workflow_dispatch:  # This allows you to manually trigger the action if needed.
+    - cron: '0 0 * * *' # every hour
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Date to run the workflow'
+        required: true
+        type: string
+        default: 'in 1 hour'
+concurrency:
+  group: schedule${{ github.event.inputs.date }}
+  cancel-in-progress: true
 
 jobs:
-  run_script:
+  schedule:
+    name: 📅 Schedule
     runs-on: ubuntu-latest
 
     steps:
