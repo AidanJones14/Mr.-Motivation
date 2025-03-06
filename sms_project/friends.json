@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Fisher",
+        "phone_number": "9106197607",
+        "email": "fishereskew@gmail.com",
+        "carrier": "verizon",
+        "message_prompt": "Create a short motivational message. PROVIDE ONLY THE MESSAGE",
+        "text_message_prompt": "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
+
+    },
+    {
+        "name": "McKoy",
+        "phone_number": "9105158674",
+        "email": "amgraha5@ncsu.edu",
+        "carrier": "verizon",
+        "message_prompt": "Create a short motivational message. PROVIDE ONLY THE MESSAGE",
+        "text_message_prompt": "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
+
+    },
+    {
+        "name": "Garrett",
+        "phone_number": "9106036495",
+        "email": "gcgraham6@gmail.com",
+        "carrier": "verizon",
+        "message_prompt": "Create a short motivational message. PROVIDE ONLY THE MESSAGE",
+        "text_message_prompt": "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
+
+    },
+    {
+        "name": "Ben",
+        "phone_number": "9104427145",
+        "email": "bentornado04@gmail.com",
+        "carrier": "verizon",
+        "message_prompt": "Create a short motivational message. PROVIDE ONLY THE MESSAGE",
+        "text_message_prompt": "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
+
+    }
+
+]
+  
