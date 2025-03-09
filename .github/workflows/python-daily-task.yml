@@ -31,4 +31,4 @@ jobs:
         python sms_project/text.py  # Make sure this path is correct.
 
     - name: Commit Changes
-      uses: AidanJones14/git-auto-commit-action@v5
+      uses: Mr.-Motivation/git-auto-commit-action@v5
