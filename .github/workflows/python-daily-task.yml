@@ -30,5 +30,15 @@ jobs:
       run: |
         python sms_project/text.py  # Make sure this path is correct.
 
-    - name: Commit Changes
-      uses: Mr.-Motivation/git-auto-commit-action@v5
+    - name: Checkout repository  
+      uses: actions/checkout@v4  
+
+    - name: Commit and Push Changes  
+      env:  
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+        run: |  
+          git config --global user.name "github-actions[bot]"  
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"  
+          git add sms_project/friends.json  
+          git commit -m "Update friends.json" || echo "No changes to commit"  
+          git push origin HEAD
