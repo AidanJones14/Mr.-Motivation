@@ -86,7 +86,7 @@ async def main():
 
     print(f"GMAIL_APP_PASSWORD is set to: {os.getenv('GMAIL_APP_PASSWORD')}")
 
-    text_prompt = "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
+    text_prompt = "You are a bot called Mr. Motivation, Create a very short one sentence message (160 characters or less) saying that Mr. Motivation (you) has a message for me in my email. ONLY RESPOND WITH THE MESSAGE"
 
     friends = load_friends_from_json('sms_project/friends.json')
 
@@ -100,13 +100,19 @@ async def main():
         num = friend['phone_number']
         carrier = friend['carrier']
         prompt = friend['message_prompt']
-        to_email = friend.get('email')  # Optional email field
+        to_email = friend.get('email')
+        previous = friend.get('previous')
 
-
-
+        new_prompt = ""
+        
+        if len(previous) == 0:
+            new_prompt = prompt + " Before you create this message, you need to understand that this prompt is run daily, so In your response make sure that it varies in tone and personality from the following message from the previous day. PREVIOUS MESSAGE: " + previous + " PROVIDE ONLY THE MESSAGE"
+        else:
+            new_prompt = prompt + " PROVIDE ONLY THE MESSAGE"
+        
         print(f"Generating email message for {friend['name']} ({num})...")
 
-        generated_message = generate_message(prompt)
+        generated_message = generate_message(new_prompt)
         print(f"Generated email message: {generated_message}")
 
         subject = "Message from Mr. Motivation"
@@ -117,6 +123,9 @@ async def main():
         # Send Email if available
         if to_email:
             tasks.append(send_email(to_email, _email, _pword, generated_message, subject))
+
+    with open('sms_project/friends.json', 'w') as f:
+    json.dump(friends, f, indent=4)
 
     # Run all tasks concurrently
     await asyncio.gather(*tasks)
