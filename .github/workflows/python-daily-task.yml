@@ -29,3 +29,6 @@ jobs:
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
       run: |
         python sms_project/text.py  # Make sure this path is correct.
+
+    - name: Commit Changes
+      uses: AidanJones14/git-auto-commit-action@v5
