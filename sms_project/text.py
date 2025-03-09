@@ -125,7 +125,7 @@ async def main():
             tasks.append(send_email(to_email, _email, _pword, generated_message, subject))
 
     with open('sms_project/friends.json', 'w') as f:
-    json.dump(friends, f, indent=4)
+        json.dump(friends, f, indent=4)
 
     # Run all tasks concurrently
     await asyncio.gather(*tasks)
