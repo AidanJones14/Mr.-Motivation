@@ -113,6 +113,8 @@ async def main():
         print(f"Generating email message for {friend['name']} ({num})...")
 
         generated_message = generate_message(new_prompt)
+
+        friend['previous'] = generated_message
         print(f"Generated email message: {generated_message}")
 
         subject = "Message from Mr. Motivation"
