@@ -26,7 +26,7 @@ jobs:
     - name: Run the Python script
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+        GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
       run: |
         python sms_project/text.py  # Make sure this path is correct.
 
