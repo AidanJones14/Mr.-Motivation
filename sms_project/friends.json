@@ -5,7 +5,7 @@
         "email": "fishereskew@gmail.com",
         "carrier": "verizon",
         "previous": "",
-        "message_prompt": "Create a message reminding me to not whack my rod today. PROVIDE ONLY THE MESSAGE",
+        "message_prompt": "Create a message reminding me to not whack my rod today.",
         "text_message_prompt": "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
 
     },
@@ -15,7 +15,7 @@
         "email": "amgraha5@ncsu.edu",
         "carrier": "verizon",
         "previous": "",
-        "message_prompt": "Create an awkward message where you kind low key say that you are in love with me and want to cuddle. PROVIDE ONLY THE MESSAGE",
+        "message_prompt": "Create an awkward message where you kind low key say that you are in love with me and want to cuddle.",
         "text_message_prompt": "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
 
     },
@@ -25,7 +25,7 @@
         "email": "gcgraham6@gmail.com",
         "carrier": "verizon",
         "previous": "",
-        "message_prompt": " Create an awkward message where you kind of keep repeating yourself saying that you want to smell different clothing items of mine. PROVIDE ONLY THE MESSAGE",
+        "message_prompt": " Create an awkward message where you kind of keep repeating yourself saying that you want to smell different clothing items of mine.",
         "text_message_prompt": "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
 
     },
@@ -35,7 +35,7 @@
         "email": "bentornado04@gmail.com",
         "carrier": "tmobile",
         "previous": "",
-        "message_prompt": "Create a message to remind me to not stroke it crazy style today. Also, tell me a dark joke. PROVIDE ONLY THE MESSAGE",
+        "message_prompt": "Create a message to remind me to not stroke it crazy style today. Also, tell me a dark joke.",
         "text_message_prompt": "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
 
     },
@@ -45,7 +45,7 @@
         "email": "nchacko2@ncsu.edu",
         "carrier": "at&t",
         "previous": "",
-        "message_prompt": "Give me a list of current event headlines. PROVIDE ONLY THE MESSAGE",
+        "message_prompt": "Give me a list of current event headlines.",
         "text_message_prompt": "Create a very short one sentence message (160 characters or less) telling me that the most important moment is right now and to check my email. ONLY RESPOND WITH THE MESSAGE"
 
     }
