@@ -86,7 +86,7 @@ async def main():
 
     print(f"GMAIL_APP_PASSWORD is set to: {os.getenv('GMAIL_APP_PASSWORD')}")
 
-    text_prompt = "You are a bot called Mr. Motivation, Create a very short one sentence message (160 characters or less) saying that Mr. Motivation (you) has a message for me in my email. ONLY RESPOND WITH THE MESSAGE"
+    text_prompt = "Create a very short one sentence message (160 characters or less) saying that I should check my email inbox. ONLY RESPOND WITH THE MESSAGE"
 
     friends = load_friends_from_json('sms_project/friends.json')
 
